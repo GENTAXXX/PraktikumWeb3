@@ -8,6 +8,10 @@ class Product extends Component {
                     <div className="logo">
                         <img src="https://ekaputrafoods.co.id/allimg/conttoimg/brandimg/5.png" alt=""/>
                     </div>
+                    <div className="troley">
+
+                        
+                    </div>
                 </div>
                 <div className="card">
                     <div className="img-thumb-prod">
