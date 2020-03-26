@@ -8,22 +8,18 @@ const { Content } = Layout; // membuat konstanta content yang berasal dari bawaa
 
 class LandingComponent extends Component{
     render(){
-        const image1 = require(`../assets/image/picture.svg`); //membuat variabel image 1 dimana isinya merupakan importan gambar yang ada dari folder images
-        const {initialData,showModal,handleOk,handleCancel} = this.props; {/* ini merupakan fungsi" yang sudah di definsiikan di landing-page.js 
-        kemudian kita panggil di halaman landing-component.js ketika kita memamnggil komponent dari parent komponen, komponen yang dipanggil
-        akan menjadi sebuah properti, kemudian kita dapat menggunakan properti itu dihalaman ini.
-        */}
+        const image1 = require(`../assets/image/LowPoly.jpg`); 
+        const {initialData} = this.props;
         return(
             <Layout className="landing-container">
-                {/* <Navbar/>  ini merupakan component navbar yang kita import dari folder layout yang ada di common */}
-                <Content style={{ overflow: "hidden" }}> {/* ini merupakan component content yang sudah di define sebelumnya*/}
+                <Content style={{ overflow: "hidden" }}> 
                     <Row className="section-container">
                         <Col lg={12} md={12} sm={12}>
                             <div className="image-big-container">
                                 <img
                                     src={image1}
                                     alt="Home 1"
-                                    style={{maxWidth: '80%'}}
+                                    style={{maxWidth: '100%'}}
                                 />
                             </div>
                         </Col>
@@ -31,9 +27,9 @@ class LandingComponent extends Component{
                             <Row>
                                 <Col span={24}>
                                     <div className="title-container">
-                                        <span className="text-soft-blue title-biggest bold">About Me</span>
+                                        <span className="text-soft-black title-biggest bold">It's Me</span>
                                         <br/>
-                                        <span className="text-soft-blue title-big bold">Vicky Hermawan</span>
+                                        <span className="text-soft-black title-big bold">Bramantya Raka Genta Ramadhan</span>
                                     </div>
                                 </Col>
                                 <Col span={24}>
@@ -44,38 +40,7 @@ class LandingComponent extends Component{
                                             style={{maxWidth: '100%'}}
                                         />
                                     </div>
-                                    <div className="description-container desc-medium">
-                                        Hanya mahasiswa yang suka motret, desain dan code, sesekali tukang workaholic. 
-                                        Suka explore alam, apps, desain apapun itu. 
-                                        Hit me at : 
-                                    </div>
                                 </Col>
-                                <Col span={24}>
-                                    <div className="button-section-1-container">                                
-                                        <ButtonHome
-                                            text="Show Me"
-                                            className='button-participate'
-                                            onClick = {showModal}
-                                        />{/* ini merupakan component button yang kita sudah definisikan di atas atas nama buttonhome*/}
-                                        <ButtonHome
-                                            text="Another Information"
-                                            background="white"
-                                            textColor="#4D5AF2"
-                                            border="1px solid #4D5AF2"
-                                            marginLeft={16}
-                                            className='button-participate'
-                                        />
-                                    </div>
-                                </Col>
-                                <Modal
-                                    title="Contact"
-                                    visible={initialData.visible}
-                                    onOk={handleOk}
-                                    onCancel={handleCancel}
-                                    className = "modal-notif"
-                                    >
-                                    <p className="text-notif">Anda dapat mengirimkan atau bertanya di vickyhermawan99@mail.ugm.ac.id</p>
-                                </Modal>{/* ini merupakan modal yang didalamnya memuat beberapa fungsi yang sudah di definisikan di atas sebagai this.props*/}
                             </Row>
                         </Col>  
                     </Row>

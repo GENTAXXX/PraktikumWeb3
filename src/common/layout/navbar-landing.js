@@ -33,25 +33,7 @@ class Navbar extends Component {
         </Menu.Item>
         <Menu.Item key="app">
           <AppstoreOutlined />
-          <Link to="/portofolio">Portofolio</Link>
-        </Menu.Item>
-        <SubMenu
-          title={
-            <span className="submenu-title-wrapper">
-              <SettingOutlined />
-              Team Work
-            </span>
-          }
-        >
-          <Menu.ItemGroup title="Team Working">
-            <Menu.Item key="galigo">Galigo</Menu.Item>
-            <Menu.Item key="kopma">Koperasi "Kopma UGM"</Menu.Item>
-          </Menu.ItemGroup>
-        </SubMenu>
-        <Menu.Item key="alipay">
-          <a href="https://github.com/vickyhermawan" target="_blank" rel="noopener noreferrer">
-            Repositori Github
-          </a>
+          <Link to="/card">Card</Link>
         </Menu.Item>
       </Menu>
     </nav>
